@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote um Gatinho | Coffee Cat Café</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS BÁSICO DO FORMULÁRIO */
+        :root {
+            --cor-primaria: #A0522D; /* Marrom-claro (Café) */
+            --cor-secundaria: #8B4513; /* Marrom Escuro */
+            --cor-fundo: #F5F5F5;
+            --cor-texto: #333333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            color: var(--cor-secundaria);
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--cor-secundaria);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Garante que padding não aumente o width total */
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-button {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: var(--cor-secundaria);
+        }
+
+        /* Seção de Sucesso (Oculta inicialmente) */
+        #success-message {
+            display: none;
+            padding: 50px;
+            background-color: #e6ffe6;
+            border: 2px solid #A0522D;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #success-message h2 {
+            color: var(--cor-secundaria);
+        }
+
+        /* Link de Volta */
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--cor-secundaria);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quero Adotar um Gatinho!</h1>
+
+    <div class="form-container" id="adoption-form-container">
+        <p>Preencha o formulário abaixo para iniciar seu processo de adoção responsável. Em breve, a ONG parceira entrará em contato para a entrevista.</p>
+
+        <form id="adoption-form">
+            <label for="nome">Seu Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="gato">Gatinho de Interesse (Opcional):</label>
+            <input type="text" id="gato" name="gato" placeholder="Ex: Gatinho Miau ou Deixe em Branco">
+
+            <label for="email">Seu Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telefone">Seu Telefone/WhatsApp:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="residencia">Tipo de Residência:</label>
+            <select id="residencia" name="residencia" required>
+                <option value="">Selecione...</option>
+                <option value="casa">Casa (Com ou Sem Quintal)</option>
+                <option value="apartamento">Apartamento (Telado ou Não)</option>
+            </select>
+
+            <label for="experiencia">Sua experiência prévia com gatos:</label>
+            <textarea id="experiencia" name="experiencia" required placeholder="Conte-nos sobre outros pets que você teve ou tem."></textarea>
+
+            <button type="submit" class="submit-button">Enviar Pedido de Adoção</button>
+        </form>
+    </div>
+
+    <div class="form-container" id="success-message">
+        <h2>🎉 Parabéns!</h2>
+        <p>Seu pedido de adoção foi enviado com sucesso.</p>
+        <p>A ONG parceira irá analisar suas informações e **entrará em contato assim que possível** para dar continuidade ao processo de entrevista e visita.</p>
+        <p>Obrigado por querer dar um lar a um de nossos felinos!</p>
+    </div>
+
+    <a href="index.html" class="back-link">← Voltar para a Home do Coffee Cat Café</a>
+
+    <script>
+        document.getElementById('adoption-form').addEventListener('submit', function(event) {
+            // Previne o comportamento padrão de envio do formulário (que recarregaria a página)
+            event.preventDefault();
+            
+            // Oculta o formulário
+            document.getElementById('adoption-form-container').style.display = 'none';
+            
+            // Exibe a mensagem de sucesso
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

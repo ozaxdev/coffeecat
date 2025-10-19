@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Cat Café: Onde o Café Encontra o Ronronar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS SIMPLIFICADO EMBUTIDO PARA RAPIDEZ */
+        :root {
+            /* Cores ajustadas para um tom mais neutro/café */
+            --cor-primaria: #A0522D; /* Marrom-claro (Sienna) - Café */
+            --cor-secundaria: #8B4513; /* Marrom (SaddleBrown) - Escuro */
+            --cor-fundo: #F5F5F5;
+            --cor-texto: #333333;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .hero-section {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-title {
+            font-family: 'Lobster', cursive;
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cor-secundaria);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+            font-size: 1.1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #6a340f; /* Tonalidade mais escura no hover */
+        }
+
+        .feature-section {
+            padding: 40px 20px;
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .feature-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid var(--cor-primaria);
+            /* Estilização para Placehold.co */
+            background-color: #ddd;
+        }
+
+        .feature-item.reverse {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .feature-item.reverse img {
+             border: 4px solid var(--cor-secundaria);
+        }
+
+        .feature-content h3 {
+            color: var(--cor-secundaria);
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        .social-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: var(--cor-secundaria);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--cor-texto);
+            color: white;
+            padding: 20px 0;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 2.5em;
+            }
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .feature-item.reverse {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <h1 class="hero-title">Coffee Cat Café</h1>
+        <p class="hero-subtitle">O seu refúgio perfeito: Café quentinho, Salgados deliciosos e Ronrons terapêuticos.</p>
+
+        <a href="social.html" class="cta-button">Veja Nosso Cardápio & Conheça os Gatos!</a>
+    </section>
+
+    <section class="feature-section">
+        <h2>Por que nos visitar?</h2>
+
+        <div class="feature-item">
+            <img src="https://placehold.co/150x150/A0522D/FFFFFF?text=CAFE" alt="Café e Salgados deliciosos">
+            <div class="feature-content">
+                <h3>☕ Sabores Frescos</h3>
+                <p>Desfrute do nosso café especial e de salgados artesanais e fresquinhos. Tudo preparado com o máximo de higiene e carinho, em um ambiente livre de pelos.</p>
+            </div>
+        </div>
+
+        <div class="feature-item reverse">
+            <img src="https://placehold.co/150x150/8B4513/FFFFFF?text=ADOTE" alt="Gatos para Adoção">
+            <div class="feature-content">
+                <h3>💖 Adoção Responsável</h3>
+                <p>Nossos gatinhos são resgatados por ONGs e estão esperando por um lar! Interaja com eles na área segregada e sinta a magia da terapia felina.</p>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <img src="https://placehold.co/150x150/A0522D/FFFFFF?text=AMBIENTE" alt="Ambiente Aconchegante">
+            <div class="feature-content">
+                <h3>🛋️ Paz e Ronronar</h3>
+                <p>Um lugar ideal para relaxar, estudar ou trabalhar, com a companhia gentil dos nossos residentes felinos (visíveis e interagíveis na área exclusiva).</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <a href="social.html" class="cta-button">Ver Fotos e Saber Mais no Nosso Perfil</a>
+        <a href="social.html" class="social-link">Siga-nos no @CoffeeCatCafe (social.html)</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coffee Cat Café. Todos os direitos reservados.</p>
+        <p>Visite-nos: Vila Felina, SP</p>
+    </footer>
+
+</body>
+</html>

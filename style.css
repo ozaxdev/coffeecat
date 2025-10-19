@@ -1,0 +1,236 @@
+/* Reset básico e tipografia */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa; /* Cor de fundo comum em redes sociais */
+    color: #262626;
+}
+
+.profile-container {
+    max-width: 600px; /* Limite de largura para simular a visualização mobile/centralizada */
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-bottom: 70px; /* Espaço para a barra de navegação inferior */
+}
+
+/* Barra de Navegação Superior (Header) */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav-icons span {
+    font-size: 1.5em;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* 1. Header do Perfil (Foto e Estatísticas) */
+.profile-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-picture {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 2px solid #e8e8e8; /* Borda sutil */
+}
+
+.profile-stats {
+    display: flex;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+.stat-label {
+    font-size: 0.85em;
+    color: #8e8e8e;
+}
+
+/* Biografia */
+.profile-bio h2 {
+    font-size: 1em;
+    margin: 0 0 5px 0;
+}
+
+.profile-bio p {
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
+.profile-link {
+    color: #00376b; /* Cor de link de rede social */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Botões de Ação */
+.profile-actions {
+    display: flex;
+    margin-top: 15px;
+}
+
+.action-btn {
+    flex-grow: 1;
+    padding: 7px 5px;
+    margin-right: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.action-btn:last-child {
+    margin-right: 0;
+}
+
+.primary {
+    background-color: #fff;
+    color: #262626;
+    border: 1px solid #dbdbdb;
+}
+
+.secondary {
+    background-color: #efefef;
+    color: #262626;
+    border: 1px solid #efefef;
+}
+
+/* 2. Destaques (Stories) */
+.highlights-section {
+    display: flex;
+    padding: 15px 0;
+    overflow-x: auto; /* Permite rolar horizontalmente se houver muitos */
+    border-bottom: 1px solid #dbdbdb;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.highlights-section::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.highlight-item {
+    text-align: center;
+    margin-right: 15px;
+    min-width: 70px; /* Largura mínima para o item */
+}
+
+.highlight-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #c2c2c2;
+    padding: 2px;
+}
+
+.highlight-label {
+    display: block;
+    font-size: 0.75em;
+    margin-top: 5px;
+    white-space: nowrap; /* Evita quebra de linha no rótulo */
+}
+
+/* 3. Abas do Feed */
+.feed-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #dbdbdb;
+    margin-top: 5px;
+}
+
+.tab-item {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.3em;
+    color: #8e8e8e;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.tab-item.active {
+    color: #262626;
+    border-bottom: 1px solid #262626;
+}
+
+/* 4. Feed de Posts (Grid) */
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px; /* Espaçamento entre as fotos (simula a rede social) */
+}
+
+.post-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Mantém as fotos quadradas */
+    object-fit: cover;
+    display: block;
+}
+
+/* Barra de Navegação Inferior (Footer) */
+.bottom-nav {
+    background-color: #fff;
+    border-top: 1px solid #dbdbdb;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 600px; /* Importante para alinhar com o .profile-container */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+.bottom-nav span {
+    font-size: 1.8em;
+    color: #262626;
+    cursor: pointer;
+}
+
+.mini-profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
